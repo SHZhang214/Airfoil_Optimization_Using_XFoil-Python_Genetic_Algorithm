@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def deform_airfoil(params, output_file='deformed.dat', base_file='naca64210.dat', xfoil_dir=r"D:\XFOIL6.99"):
-    """Deform NACA 64-210 using Bernstein polynomials"""
     os.chdir(xfoil_dir)
     
     base = np.loadtxt(base_file, skiprows=1)
@@ -48,7 +47,7 @@ VISC 3000000
 MACH {mach}
 PACC
 {polar_file}
-polar3
+polar
 ALFA {alpha}
 QUIT
 """
