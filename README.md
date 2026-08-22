@@ -2,6 +2,8 @@
 
 A Python-based aerodynamic shape optimization code for 2D airfoils at transonic conditions (Mach 0.6, Re = 3e6). Two approaches are implemented: (1) deformation of NACA 64-210 using Bernstein polynomials, and (2) pure CST parameterization from scratch.
 
+Restrictions such as thickness are added so that the generated airfoils are realistic for real-world engineering.
+
 ## Features
 
 - **NACA 64-210 Deformation**: Perturb the baseline airfoil with smooth Bernstein basis functions
