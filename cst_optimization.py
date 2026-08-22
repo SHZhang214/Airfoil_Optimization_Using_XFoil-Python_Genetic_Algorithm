@@ -36,7 +36,6 @@ def cst_airfoil(params, n=60):
     return coords
 
 def save_airfoil(coords, filename='cst_airfoil.dat', xfoil_dir=r"D:\XFOIL6.99"):
-    """Save coordinates to DAT file"""
     os.chdir(xfoil_dir)
     np.savetxt(filename, coords, fmt='%.6f', header='CST Airfoil', comments='')
     return filename
@@ -44,12 +43,6 @@ def save_airfoil(coords, filename='cst_airfoil.dat', xfoil_dir=r"D:\XFOIL6.99"):
 counter = 0
 
 def objective(params, mach=0.6):
-    """
-    params: 12 variables
-    - params[0:10]: CST shape coefficients
-    - params[10]: thickness (0.05~0.15)
-    - params[11]: camber (0~0.04)
-    """
     global counter
     counter += 1
     os.chdir(r"D:\XFOIL6.99")
@@ -70,7 +63,7 @@ VISC 3000000
 MACH {mach}
 PACC
 {polar_file}
-polar4
+polar
 ALFA {alpha}
 QUIT
 """
