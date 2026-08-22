@@ -17,7 +17,7 @@ A Python-based aerodynamic shape optimization code for 2D airfoils at transonic 
 |--------|-----------|----------|----|----|
 | NACA Deform | Max L/D | 84.79 | 0.00839 | 0.7112 |
 | NACA Deform | Max L/D + CD Constraint | 82.14 | 0.00818 | 0.6720 |
-| Pure CST | Max L/D | 83.89 | 0.00727 | 0.6097 |
+| Pure CST | Max L/D | 81.21 | 0.00713 | 0.5789 |
 
 ## Requirements
 
@@ -32,5 +32,7 @@ Alpha: 3.0 degrees
 
 ## Results Visualization
 
-Example: deformed NACA 64-210 with drag coefficient lower than original and maximized lift-drag ratio
+Example 1: deformed NACA 64-210 with drag coefficient lower than original and maximized lift-drag ratio
 ![Deformed performance](Results/minCDmaxLD_performance.png)
+Example 2: CST optimized airfoil shape and lift-drag ratio history
+![Deformed performance](Results/CST_shape_LDhistory.png)
